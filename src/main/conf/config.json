@@ -1,0 +1,14 @@
+{
+  "http.server.config": {
+    "http.server.port": 8008,
+    "library.db.eb.address": "library.db.queue"
+  },
+  "mysql.config": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "SR_DEV",
+    "username": "root",
+    "password": "root",
+    "maxPoolSize": 64
+  }
+}

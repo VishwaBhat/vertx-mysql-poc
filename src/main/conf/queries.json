@@ -1,0 +1,6 @@
+{
+  "GET_ALL_USERS": "SELECT * FROM USERS",
+  "GET_USER_BY_ID": "SELECT * FROM (SELECT id, name AS user_name, email, website FROM users WHERE id = 1) u LEFT JOIN (SELECT user_id, name AS skill_name, s.id AS skill_id FROM user_skills ius LEFT JOIN skills s ON ius.skill_id = s.id) us ON us.user_id = u.id LEFT JOIN (SELECT user_id, college AS edu_college, location AS edu_location, degree AS edu_degree, e.id AS edu_id, start_month AS edu_start_month, end_month AS edu_end_month, start_year AS edu_start_year, end_year AS edu_end_year, is_current AS edu_is_current, description AS edu_description FROM user_educations ue LEFT JOIN educations e ON ue.education_id = e.id) ued ON ued.user_id = u.id LEFT JOIN (SELECT user_id, ex.id as exp_id, company, designation, location AS exp_location, start_month AS exp_start_month, end_month AS exp_end_month, start_year AS exp_start_year, end_year AS exp_end_year, is_current AS exp_is_current, description AS exp_description FROM user_experiences uex LEFT JOIN EXPERIENCES ex ON uex.experience_id = ex.id) uexp ON uexp.user_id =?",
+  "GET_USER_SKILLS": "SELECT S.id as id, S.name AS skill FROM USER_SKILLS AS US, SKILLS AS S WHERE US.user_id=? AND US.SKILL_ID=S.ID",
+  "ADD_NEW_USER_SKILL": "insert into USER_SKILLS values (?,?)"
+}
