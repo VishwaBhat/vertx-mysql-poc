@@ -1,6 +1,12 @@
+
 = Starter
 
 image:https://img.shields.io/badge/vert.x-3.6.2-purple.svg[link="https://vertx.io"]
+
+== CRUD Prototype built using following frameworks/tools:
+  - Vertx 3.6.x
+  - MySQL
+  - Async MySQL Java Driver
 
 This application was generated using http://start.vertx.io
 
